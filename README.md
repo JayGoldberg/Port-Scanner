@@ -19,6 +19,7 @@ This is a simple port scanner script written in Bash that uses `netcat` (or `nc`
     ```
 ## Usage
 To use the script, run it with the following syntax:
-
+```bash
+./main.sh <IP_ADDRESS> <START_PORT> <END_PORT> 
 
 
