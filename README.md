@@ -12,6 +12,8 @@ This is a simple port scanner script written in Bash that uses `netcat` (or `nc`
    git clone https://github.com/manuemmanuel/Port-Scanner.git
    ```
 2. Make the script executable by running:
-
+   ```bash
+    chmod +x port_scanner.sh
+    ```
  
 
