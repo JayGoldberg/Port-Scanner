@@ -35,3 +35,17 @@ bash main.sh 192.168.114.224 5550 5560
 ```
 ## Output
 The script will output the status of each port in the specified range, indicating whether the port is open or closed.
+```bash
+└─$ bash main.sh 192.168.114.224 5550 5560
+Port 5550 is closed
+Port 5551 is closed
+Port 5552 is closed
+Port 5553 is closed
+Port 5554 is closed
+Port 5555 is open
+Port 5556 is closed
+Port 5557 is closed
+Port 5558 is closed
+Port 5559 is closed
+Port 5560 is closed
+```
