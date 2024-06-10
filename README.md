@@ -26,3 +26,4 @@ To use the script, run it with the following syntax:
 ## Parameters
 - `<IP_ADDRESS>`: The IP address you want to scan.
 - `<START_PORT>`: The starting port number in the range.
+- `<END_PORT>`: The ending port number in the range.
