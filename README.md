@@ -20,10 +20,12 @@ This is a simple port scanner script written in Bash that uses `netcat` (or `nc`
 ## Usage
 To use the script, run it with the following syntax:
 ```bash
-./main.sh <IP_ADDRESS> <START_PORT> <END_PORT> 
+bash main.sh <IP_ADDRESS> <START_PORT> <END_PORT> 
 ```
 
 ## Parameters
 - `<IP_ADDRESS>`: The IP address you want to scan.
 - `<START_PORT>`: The starting port number in the range.
 - `<END_PORT>`: The ending port number in the range.
+
+
