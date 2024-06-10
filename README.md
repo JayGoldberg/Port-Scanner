@@ -8,5 +8,8 @@ This is a simple port scanner script written in Bash that uses `netcat` (or `nc`
 
 ## Installation
 1. Clone the repository or download the script file `main.sh`.
-  
+   ```bash
+   git clone https://github.com/manuemmanuel/Port-Scanner.git
+   ```
+
 
