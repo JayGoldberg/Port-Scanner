@@ -5,3 +5,6 @@ This is a simple port scanner script written in Bash that uses `netcat` (or `nc`
 ## Prerequisites
 
 - `netcat` (or `nc`) must be installed on your system. You can check if it is installed by running `nc -h` in your terminal.
+
+## Installation
+
