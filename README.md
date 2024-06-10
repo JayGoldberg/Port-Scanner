@@ -28,4 +28,8 @@ bash main.sh <IP_ADDRESS> <START_PORT> <END_PORT>
 - `<START_PORT>`: The starting port number in the range.
 - `<END_PORT>`: The ending port number in the range.
 
-
+## Example
+To scan ports 5550 to 5560 on the IP address 192.168.114.224, use the following command:
+```bash
+bash main.sh 192.168.114.224 5550 5560
+```
