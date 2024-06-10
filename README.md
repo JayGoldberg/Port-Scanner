@@ -18,6 +18,7 @@ This is a simple port scanner script written in Bash that uses `netcat` (or `nc`
     chmod +x main.sh
     ```
 ## Usage
+To use the script, run it with the following syntax:
 
 
 
