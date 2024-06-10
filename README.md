@@ -33,3 +33,5 @@ To scan ports `5550` to `5560` on the IP address `192.168.114.224`, use the foll
 ```bash
 bash main.sh 192.168.114.224 5550 5560
 ```
+## Output
+The script will output the status of each port in the specified range, indicating whether the port is open or closed.
