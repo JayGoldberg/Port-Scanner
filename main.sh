@@ -1,5 +1,6 @@
-#!/bin/bash
-if [ "$#" -ne 3 ]; then
+#!/bin/sh
+
+if [ $# -ne 3 ]; then
     echo "Usage: $0 <IP_ADDRESS> <START_PORT> <END_PORT>"
     exit 1
 fi
@@ -13,12 +14,30 @@ if ! command -v nc &> /dev/null; then
     exit 1
 fi
 
-for ((port=START_PORT; port<=END_PORT; port++))
-do
-    nc -zv -w 1 $IP_ADDRESS $port &> /dev/null
+timeout () {
+    local timeout_secs=${1:-10}
+    shift
+
+    [ ! -z "${timeout_secs//[0-9]}" ] && { return 65; }
+    
+    # subshell
+    ( 
+        "$@" &
+        child=$!
+        #trap - '' SIGTERM #why would we need this?
+        (       
+                sleep $timeout_secs
+                kill $child 2> /dev/null # TODO returns 143 instead of "real" timeout's 124
+        ) &
+        wait $child
+    )
+}
+
+for port in `seq $START_PORT $END_PORT`; do
+    timeout 1 nc $IP_ADDRESS $port #&> /dev/null
     if [ $? -eq 0 ]; then
-        echo "Port $port is open"
+        echo "${IP_ADDRESS}:${port} is open"
     else
-        echo "Port $port is closed"
+        echo "${IP_ADDRESS}:${port} is closed"
     fi
 done
